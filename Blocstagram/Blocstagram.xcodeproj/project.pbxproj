@@ -28,6 +28,7 @@
 		1C0C91B61D6F6CF600625486 /* Media.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0C91B51D6F6CF600625486 /* Media.m */; };
 		1C0C91B91D6F6DFD00625486 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0C91B81D6F6DFD00625486 /* Comment.m */; };
 		1C0C91BC1D6F6F3200625486 /* DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0C91BB1D6F6F3200625486 /* DataSource.m */; };
+		1C1EB7041D7897FB003A23E6 /* MediaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C1EB7031D7897FB003A23E6 /* MediaTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,8 @@
 		1C0C91B81D6F6DFD00625486 /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
 		1C0C91BA1D6F6F3200625486 /* DataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSource.h; sourceTree = "<group>"; };
 		1C0C91BB1D6F6F3200625486 /* DataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSource.m; sourceTree = "<group>"; };
+		1C1EB7021D7897FB003A23E6 /* MediaTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaTableViewCell.h; sourceTree = "<group>"; };
+		1C1EB7031D7897FB003A23E6 /* MediaTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +139,8 @@
 				1C0C916A1D6F524200625486 /* AppDelegate.m */,
 				1C0C91AE1D6F551300625486 /* ImagesTableViewController.h */,
 				1C0C91AF1D6F551300625486 /* ImagesTableViewController.m */,
+				1C1EB7021D7897FB003A23E6 /* MediaTableViewCell.h */,
+				1C1EB7031D7897FB003A23E6 /* MediaTableViewCell.m */,
 				1C0C91721D6F524200625486 /* Assets.xcassets */,
 				1C0C91741D6F524200625486 /* LaunchScreen.storyboard */,
 				1C0C91771D6F524200625486 /* Info.plist */,
@@ -344,6 +349,7 @@
 			files = (
 				1C0C91B31D6F6B8C00625486 /* User.m in Sources */,
 				1C0C91B91D6F6DFD00625486 /* Comment.m in Sources */,
+				1C1EB7041D7897FB003A23E6 /* MediaTableViewCell.m in Sources */,
 				1C0C91B61D6F6CF600625486 /* Media.m in Sources */,
 				1C0C916B1D6F524200625486 /* AppDelegate.m in Sources */,
 				1C0C91BC1D6F6F3200625486 /* DataSource.m in Sources */,
