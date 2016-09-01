@@ -13,6 +13,8 @@
 #import "Comment.h"
 
 
+//#define items [DataSource sharedInstance].mediaItems
+
 @interface ImagesTableViewController ()
 
 @end
@@ -93,6 +95,18 @@
     //return (CGRectGetWidth(self.view.frame)/image.size.width) * image.size.height;
     //Two Returns???? was i supposed to delete this?
 }
+
+
+
+
+
+//HELP HERE
+- (void) items {
+    [DataSource sharedInstance].mediaItems;
+}
+
+
+
 
 
 // Override to support conditional editing of the table view.
