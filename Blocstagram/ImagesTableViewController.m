@@ -56,7 +56,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return [DataSource sharedInstance].mediaItems.count;
+    return self.items.count;
 }
 
 
@@ -90,7 +90,7 @@
 //}
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     MediaTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"mediaCell" forIndexPath:indexPath];
-    cell.mediaItem = [DataSource sharedInstance].mediaItems[indexPath.row];
+    cell.mediaItem = self.items[indexPath.row];
     return cell;
 }
 
@@ -112,8 +112,8 @@
 
 
 //HELP HERE
-- (void) items {
-    [DataSource sharedInstance].mediaItems;
+- (NSArray *) items {
+    return [DataSource sharedInstance].mediaItems;
 }
 
 
