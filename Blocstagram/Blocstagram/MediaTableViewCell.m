@@ -26,6 +26,7 @@ static UIColor *usernameLabelGray;
 static UIColor *commentLabelGray;
 static UIColor *linkColor;
 static NSParagraphStyle *paragraphStyle;
+static UIColor *orangeComment;
 
 
 @implementation MediaTableViewCell
@@ -60,6 +61,7 @@ static NSParagraphStyle *paragraphStyle;
     usernameLabelGray = [UIColor colorWithRed:0.933 green:0.933 blue:0.933 alpha:1]; /*#eeeeee*/
     commentLabelGray = [UIColor colorWithRed:0.898 green:0.898 blue:0.898 alpha:1]; /*#e5e5e5*/
     linkColor = [UIColor colorWithRed:0.345 green:0.314 blue:0.427 alpha:1]; /*#58506d*/
+    orangeComment = [UIColor colorWithRed:1.000 green:0.500 blue:0.000 alpha:1]; /*#ff8000*/
     
     NSMutableParagraphStyle *mutableParagraphStyle = [[NSMutableParagraphStyle alloc] init];
     mutableParagraphStyle.headIndent = 20.0;
@@ -86,6 +88,12 @@ static NSParagraphStyle *paragraphStyle;
     [mutableUsernameAndCaptionString addAttribute:NSFontAttributeName value:[boldFont fontWithSize:usernameFontSize] range:usernameRange];
     [mutableUsernameAndCaptionString addAttribute:NSForegroundColorAttributeName value:linkColor range:usernameRange];
     
+    //increase kearning of caption doesn't work
+    //NSRange captionRange = [baseString rangeOfString:self.mediaItem.caption];
+    //[mutableUsernameAndCaptionString addAttribute:NSKernAttributeName value: 0.8 range:captionRange];
+    
+    
+    
     return mutableUsernameAndCaptionString;
 }
 
@@ -104,6 +112,15 @@ static NSParagraphStyle *paragraphStyle;
         NSRange usernameRange = [baseString rangeOfString:comment.from.userName];
         [oneCommentString addAttribute:NSFontAttributeName value:boldFont range:usernameRange];
         [oneCommentString addAttribute:NSForegroundColorAttributeName value:linkColor range:usernameRange];
+        
+        //trying to select only the first comment-not working
+        for (int i = 0; i<=2; i++){
+            if (i == 0) {
+                //change comment to orange
+                NSRange commentRange = [baseString rangeOfString:comment.text];
+                [oneCommentString addAttribute:NSForegroundColorAttributeName value:orangeComment range:commentRange];
+            }
+        }
         
         [commentString appendAttributedString:oneCommentString];
     }

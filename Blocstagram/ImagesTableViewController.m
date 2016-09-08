@@ -60,34 +60,7 @@
 }
 
 
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    //#1
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"imageCell" forIndexPath:indexPath];
-//    
-//    // Configure the cell...
-//    
-//    //#2
-//    static NSInteger imageViewTag = 1234;
-//    UIImageView *imageView = (UIImageView*)[cell.contentView viewWithTag:imageViewTag];
-//    
-//    //#3
-//    if (!imageView) {
-//        //this is a new cell, it doesn't have an image view yet
-//        imageView = [[UIImageView alloc] init];
-//        imageView.contentMode = UIViewContentModeScaleToFill;
-//        imageView.frame = cell.contentView.bounds;
-//        
-//        //#4
-//        imageView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
-//        imageView.tag = imageViewTag;
-//        [cell.contentView addSubview:imageView];
-//    }
-//    
-//    Media *item = [DataSource sharedInstance].mediaItems[indexPath.row];
-//    imageView.image = item.image;
-//    
-//    return cell;
-//}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     MediaTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"mediaCell" forIndexPath:indexPath];
     cell.mediaItem = self.items[indexPath.row];
@@ -111,7 +84,7 @@
 
 
 
-//HELP HERE
+
 - (NSArray *) items {
     return [DataSource sharedInstance].mediaItems;
 }
