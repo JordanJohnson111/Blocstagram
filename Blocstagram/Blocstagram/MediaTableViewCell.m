@@ -18,6 +18,7 @@
 @property (nonatomic, strong) UILabel *usernameAndCaptionLabel;
 @property (nonatomic, strong) UILabel *commentLabel;
 @property (nonatomic, strong) NSLayoutConstraint *imageHeightConstraint;
+@property (nonatomic, strong) NSLayoutConstraint *imageWidthConstraint;
 @property (nonatomic, strong) NSLayoutConstraint *usernameAndCaptionLabelHightConstraint;
 @property (nonatomic, strong) NSLayoutConstraint *commentLabelHeightConstraint;
 
@@ -175,6 +176,13 @@ static NSParagraphStyle *paragraphStyle;
     self.usernameAndCaptionLabelHightConstraint.constant = usernameLabelSize.height + 20;
     self.commentLabelHeightConstraint.constant = commentLabelSize.height + 20;
     self.imageHeightConstraint.constant = self.mediaItem.image.size.height / self.mediaItem.image.size.width * CGRectGetWidth(self.contentView.bounds);
+    
+    
+    //self.mediaItem.image.size.height = 100;
+    //self.imageHeightConstraint.constant = self.mediaItem.image.size.height = 100;
+    
+    //CGSize hundredSize = CGSizeMake(100, 100);
+    //CGSize hundredHeight = [self.mediaItem.image sizeThatFits:hundredSize];
     
     
     //Hide the line between cells
