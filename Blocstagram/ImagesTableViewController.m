@@ -89,12 +89,13 @@
             if (kindOfChange == NSKeyValueChangeInsertion) {
                 [self.tableView insertRowsAtIndexPaths:indexPathsThatChanged withRowAnimation:UITableViewRowAnimationAutomatic];
             } else if (kindOfChange == NSKeyValueChangeRemoval) {
+                //[self.tableView insertRowsAtIndexPaths:indexPathsThatChanged withRowAnimation:UITableViewRowAnimationAutomatic];
                 [self.tableView deleteRowsAtIndexPaths:indexPathsThatChanged withRowAnimation:UITableViewRowAnimationAutomatic];
             } else if (kindOfChange == NSKeyValueChangeReplacement) {
                 [self.tableView reloadRowsAtIndexPaths:indexPathsThatChanged withRowAnimation:UITableViewRowAnimationAutomatic];
             }
             
-            //Tell the table view that we're one telling it about changes, and to complete the animation
+            //Tell the table view that we're done telling it about changes, and to complete the animation
             [self.tableView endUpdates];
         }
     }

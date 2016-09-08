@@ -155,7 +155,10 @@
 
 - (void) deleteMediaItem:(Media *)item {
     NSMutableArray *mutableArrayWithKVO = [self mutableArrayValueForKey:@"mediaItems"];
+    
     [mutableArrayWithKVO removeObject:item];
+    //[mutableArrayWithKVO addObject:item atIndex:0];
+    [mutableArrayWithKVO insertObject:item atIndex:0];
 }
 
 
