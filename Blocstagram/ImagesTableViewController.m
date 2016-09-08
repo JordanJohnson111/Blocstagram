@@ -100,7 +100,7 @@
 
 
 
-//HELP HERE
+//Assignment refractoring
 - (NSArray *) items {
     return [DataSource sharedInstance].mediaItems;
 }
