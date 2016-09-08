@@ -48,6 +48,9 @@
         NSString *imageName = [NSString stringWithFormat:@"%d.jpg", i];
         UIImage *image = [UIImage imageNamed:imageName];
         
+        //resize image
+        
+        
         if (image) {
             Media *media = [[Media alloc] init];
             media.user = [self randomUser];
@@ -129,45 +132,38 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -65,6 +65,14 @@ static NSParagraphStyle *paragraphStyle;
         [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_mediaImageView][_usernameAndCaptionLabel][_commentLabel]" options:kNilOptions metrics:nil views:viewDictionary]];
         
         
+        //NSUInteger MAX_HEIGHT = 100;
+        //NSUInteger MAX_WIDTH = 100;
+        //CGFloat aspectRatio = (self.mediaItem.image.size.width / self.mediaItem.image.size.height);
+        
+        //self.imageHeightConstraint = [[NSLayoutConstraint constraintsWithVisualFormat:@"H:[_mediaImageView(<=max)]" options:0 metrics:@{@"max" : @(MAX_HEIGHT)} views:@{@"_mediaImageView" : _mediaImageView}]];
+        //self.imageWidthConstraint = [[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_mediaImageView(<=max)]" options:0 metrics:@{@"max" : @(MAX_WIDTH)} views:@{@"_mediaImageView" : _mediaImageView}]];
+        
+        
         self.imageHeightConstraint = [NSLayoutConstraint constraintWithItem:_mediaImageView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:100];
         self.imageHeightConstraint.identifier = @"Image height constraint";
         
