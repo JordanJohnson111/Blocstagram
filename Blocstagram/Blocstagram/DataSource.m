@@ -132,7 +132,7 @@
 
 #pragma mark Instagram Login
 
-+ (NSString *) instagramCliendID {
++ (NSString *) instagramClientID {
     return @"5ec47246dd2d4cb38900997a7689c9b0";
 }
 
