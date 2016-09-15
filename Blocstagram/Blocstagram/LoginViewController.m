@@ -43,7 +43,22 @@ NSString *const LoginViewControllerDidGetAccessTokenNotification = @"LoginViewCo
         [self.webView loadRequest:request];
     }
     
+    //Add 'Home' button
+    UIBarButtonItem *homeButton = [[UIBarButtonItem alloc] initWithTitle:@"Home" style:UIBarButtonItemStylePlain target:self action:@selector(Home)];
+    self.navigationItem.leftBarButtonItem = homeButton;
+    
 }
+
+// WHATS THE DIFFERENCE?
+//- (IBAction)Home:(id)sender {
+//    //[self dismissViewControllerAnimated:YES completion:nil];
+//    [self viewDidLoad];
+//}
+
+- (IBAction)Home {
+    [self viewDidLoad];
+}
+
 
 - (void) viewWillLayoutSubviews {
     self.webView.frame = self.view.bounds;
