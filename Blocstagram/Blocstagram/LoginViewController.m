@@ -9,7 +9,7 @@
 #import "LoginViewController.h"
 #import "DataSource.h"
 
-@interface LoginViewController ()
+@interface LoginViewController () <UIWebViewDelegate>
 
 @property (nonatomic, weak) UIWebView *webView;
 
@@ -43,20 +43,33 @@ NSString *const LoginViewControllerDidGetAccessTokenNotification = @"LoginViewCo
         [self.webView loadRequest:request];
     }
     
-    //Add 'Home' button
-    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:self action:@selector(goBack)];
-    self.navigationItem.leftBarButtonItem = backButton;
+    //Add 'Back' button
+    //UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:self action:@selector(goBack)];
+    //self.navigationItem.leftBarButtonItem = backButton;
     
 }
 
-// WHATS THE DIFFERENCE?
-//- (IBAction)Home:(id)sender {
-//    //[self dismissViewControllerAnimated:YES completion:nil];
-//    [self viewDidLoad];
+
+- (void)goBack {
+    [self.webView goBack];
+}
+
+
+//if (self.webView.canGoBack == YES) {
+//    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:self action:@selector(goBack)];
+//    self.navigationItem.leftBarButtonItem = backButton;
 //}
 
-- (IBAction)goBack {
-    [self.webView goBack];
+
+-(void)webViewDidFinishLoad:(UIWebView *)_webView{
+    //self.goBack.enabled = [self.webView canGoBack];
+    if (self.webView.canGoBack) {
+        UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:self action:@selector(goBack)];
+        self.navigationItem.leftBarButtonItem = backButton;
+        //self.navigationItem.leftBarButtonItem.enabled = self.webView.canGoBack;
+    } else {
+        self.navigationItem.leftBarButtonItem = nil;
+    }
 }
 
 
