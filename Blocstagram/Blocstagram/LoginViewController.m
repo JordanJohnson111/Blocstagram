@@ -44,8 +44,8 @@ NSString *const LoginViewControllerDidGetAccessTokenNotification = @"LoginViewCo
     }
     
     //Add 'Home' button
-    UIBarButtonItem *homeButton = [[UIBarButtonItem alloc] initWithTitle:@"Home" style:UIBarButtonItemStylePlain target:self action:@selector(goHome)];
-    self.navigationItem.leftBarButtonItem = homeButton;
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:self action:@selector(goBack)];
+    self.navigationItem.leftBarButtonItem = backButton;
     
 }
 
@@ -55,7 +55,7 @@ NSString *const LoginViewControllerDidGetAccessTokenNotification = @"LoginViewCo
 //    [self viewDidLoad];
 //}
 
-- (IBAction)goHome {
+- (IBAction)goBack {
     [self.webView goBack];
 }
 
