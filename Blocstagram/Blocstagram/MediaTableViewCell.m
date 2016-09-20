@@ -114,12 +114,9 @@ static UIColor *orangeComment;
         [oneCommentString addAttribute:NSForegroundColorAttributeName value:linkColor range:usernameRange];
         
         //trying to select only the first comment-not working
-        for (int i = 0; i<=2; i++){
-            if (i == 0) {
-                //change comment to orange
-                NSRange commentRange = [baseString rangeOfString:comment.text];
-                [oneCommentString addAttribute:NSForegroundColorAttributeName value:orangeComment range:commentRange];
-            }
+        if (comment == self.mediaItem.comments[0]) {
+            NSRange commentRange = [baseString rangeOfString:comment.text];
+            [oneCommentString addAttribute:NSForegroundColorAttributeName value:orangeComment range:commentRange];
         }
         
         [commentString appendAttributedString:oneCommentString];
